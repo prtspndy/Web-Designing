@@ -2,53 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Basic HTML Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Form - Student Registration</title>
 </head>
 <body>
 
-    <h2>Student Registration Form</h2>
+    <main>
+        <h1>Student Registration Form</h1>
 
-    <form>
+        <form method="post">
 
-        <!-- Name -->
-        <label>Full Name:</label><br>
-        <input type="text" placeholder="Enter your name"><br><br>
+            <p>
+                <label for="full-name">Full Name:</label><br>
+                <input id="full-name" name="full-name" type="text" placeholder="Enter your name">
+            </p>
 
-        <!-- Email -->
-        <label>Email:</label><br>
-        <input type="email" placeholder="Enter your email"><br><br>
+            <p>
+                <label for="email">Email:</label><br>
+                <input id="email" name="email" type="email" placeholder="Enter your email">
+            </p>
 
-        <!-- Password -->
-        <label>Password:</label><br>
-        <input type="password" placeholder="Enter password"><br><br>
+            <p>
+                <label for="password">Password:</label><br>
+                <input id="password" name="password" type="password" placeholder="Enter password">
+            </p>
 
-        <!-- Gender -->
-        <label>Gender:</label><br>
-        <input type="radio" name="gender"> Male  
-        <input type="radio" name="gender"> Female  
-        <input type="radio" name="gender"> Other  
-        <br><br>
+            <fieldset>
+                <legend>Gender</legend>
+                <label>
+                    <input type="radio" name="gender" value="male">
+                    Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female">
+                    Female
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="other">
+                    Other
+                </label>
+            </fieldset>
 
-        <!-- Course -->
-        <label>Course:</label><br>
-        <select>
-            <option>Select Course</option>
-            <option>B.Tech</option>
-            <option>BCA</option>
-            <option>B.Sc</option>
-            <option>B.Com</option>
-        </select>
-        <br><br>
+            <p>
+                <label for="course">Course:</label><br>
+                <select id="course" name="course">
+                    <option value="">Select Course</option>
+                    <option value="b-tech">B.Tech</option>
+                    <option value="bca">BCA</option>
+                    <option value="b-sc">B.Sc</option>
+                    <option value="b-com">B.Com</option>
+                </select>
+            </p>
 
-        <!-- Message -->
-        <label>Message:</label><br>
-        <textarea rows="4" cols="30" placeholder="Write something..."></textarea>
-        <br><br>
+            <p>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="30" placeholder="Write something..."></textarea>
+            </p>
 
-        <!-- Submit -->
-        <input type="submit" value="Register">
+            <button type="submit">Register</button>
 
-    </form>
+        </form>
+    </main>
 
 </body>
 </html>
